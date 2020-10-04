@@ -26,6 +26,12 @@ input {
   padding: 5px 15px;
   width: 25rem;
 }
+select {
+  margin: 1rem 0rem;
+  padding: 5px 15px;
+  width: 25rem;
+  font-family: inherit;
+}
 button {
   font-family: inherit;
   color: white;

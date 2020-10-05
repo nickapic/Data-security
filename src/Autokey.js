@@ -10,7 +10,6 @@ var AutoKeyCipher = function (text, key, method) {
   text = text.toLowerCase();
   var citext = "";
   var newKey = "";
-
   let z = 0;
   let hold = 0;
 
@@ -24,9 +23,6 @@ var AutoKeyCipher = function (text, key, method) {
       newKey += key[i];
     }
   }
-
-  //console.log(newKey);
-
   if (method === "Encode") {
     for (let i = 0; i < text.length; i++) {
       if (text[i] === " ") {
@@ -36,7 +32,6 @@ var AutoKeyCipher = function (text, key, method) {
         citext += codeToAscii(
           ((ascii(text[i]) - 64 + ascii(newKey[i])) % 26) + 97
         );
-        //console.log(((ascii(text[i]) - 64  + ascii(newKey[i])) % 26) + 97);
       }
     }
     return citext;
@@ -54,6 +49,4 @@ var AutoKeyCipher = function (text, key, method) {
     }
     return citext;
   }
-
-  console.log(citext);
 };

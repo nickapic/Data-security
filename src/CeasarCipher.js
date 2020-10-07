@@ -16,6 +16,7 @@ const caesarShift = function (str, amount) {
 };
 const ceaserdecrypt = function (encstring, key) {
   let plainText = "";
+  let plainCharacter = "";
   for (var i = 0; i < encstring.length; i++) {
     let encryptedCharacter = encstring.charCodeAt(i);
     if (encryptedCharacter >= 97 && encryptedCharacter <= 122) {
@@ -33,4 +34,12 @@ const ceaserdecrypt = function (encstring, key) {
   return plainText;
 };
 
-export default { caesarShift, ceaserdecrypt };
+function handlerceaser(word, a, encordec) {
+  if (encordec === "enc") {
+    console.log();
+    caesarShift(word, a);
+  } else if (encordec === "dec") {
+    ceaserdecrypt(word, a);
+  }
+}
+export { caesarShift, ceaserdecrypt };

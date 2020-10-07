@@ -23,7 +23,7 @@ var AutoKeyCipher = function (text, key, method) {
       newKey += key[i];
     }
   }
-  if (method === "Encode") {
+  if (method === "enc") {
     for (let i = 0; i < text.length; i++) {
       if (text[i] === " ") {
         citext += " ";
@@ -50,3 +50,5 @@ var AutoKeyCipher = function (text, key, method) {
     return citext;
   }
 };
+
+export default AutoKeyCipher;
